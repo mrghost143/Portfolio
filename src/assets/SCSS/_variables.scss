@@ -1,0 +1,9 @@
+
+
+:root{
+    --headerBackground:red;
+}
+body.ankit{
+    --headerBackground:yellow;
+}
+$headerBackground:var(--headerBackground);
