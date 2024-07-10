@@ -1,0 +1,57 @@
+.container {
+    &.header {
+        padding: 0 50px;
+        .menu,
+        .close {
+            display: none;
+            font-size: 30px;
+            color: $highlightColor;
+            font-weight: 600;
+        }
+        @include breakpoint(ipad) {
+            padding: 0 25px;
+            .menu,
+            .close {
+                display: block;
+            }
+
+            .header-nav {
+                position: fixed;
+                display: flex;
+                justify-content: flex-end;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+                &.show {
+                    /* inset: 0; */
+                    width: 100%;
+                    /* background: red; */
+                    top: 0;
+                    left: 0;
+                    height: 100vh;
+                }
+                &.hide {
+                    inset: -0% -100% 0% 100%;
+                }
+
+                .close {
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                }
+                &-list {
+                    width: min(75vw, 400px);
+                    height: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $bgColor;
+                    gap: 20px;
+                }
+                &-item {
+                    min-width: 150px;
+                }
+            }
+        }
+    }
+}

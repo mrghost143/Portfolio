@@ -1,9 +1,20 @@
-
-
-:root{
-    --headerBackground:red;
+:root {
+    --bg-Color: #0a192f;
+    --bg-Color-Blur: #0a192fd9;
+    --highlight-Color: #64ffda;
+    --text-Color-Dark: #495670;
+    --text-Color: #8892b0;
+    --text-Color-Light: #a8b2d1;
+    --text-Color-Lightest: #ccd6f6;
 }
-body.ankit{
-    --headerBackground:yellow;
-}
-$headerBackground:var(--headerBackground);
+$primary-font: "Poppins";
+$mono-font: "Kode Mono", monospace;
+
+$bgColor: var(--bg-Color);
+$bgColorBlur: var(--bg-Color-Blur);
+
+$highlightColor: var(--highlight-Color);
+$textColor: var(--text-Color);
+$textColorDark: var(--text-Color-Dark);
+$textColorLight: var(--text-Color-Light);
+$textColorLightest: var(--text-Color-Lightest);
