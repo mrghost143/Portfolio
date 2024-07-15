@@ -14,11 +14,10 @@ const Header = () => {
     const [width] = useWindowSize()
     useEffect(() => {
         if (width < 768 && isMenu) {
-            console.log("helo");
+            document.getElementsByTagName('body')[0].classList.add("hideOverflow")
         } else {
-            console.log("helo");
+            document.getElementsByTagName('body')[0].classList.remove("hideOverflow")
         }
-
     }, [width, isMenu])
     return (
 
@@ -44,32 +43,29 @@ const Header = () => {
 
                     <li className="header-nav-item">
                         <AosWrapper animation="fade-down" delay="200">
-                            <a href="/#about">About Me</a>
+                            <a href="/#about" className='bottom-hightlight'>About Me</a>
                         </AosWrapper>
                     </li>
 
                     <li className="header-nav-item">
                         <AosWrapper animation="fade-down" delay="300">
-                            <a href="/#job">Skills</a>
+                            <a href="/#job" className='bottom-hightlight'>Skills</a>
                         </AosWrapper>
                     </li>
                     <li className="header-nav-item">
                         <AosWrapper animation="fade-down" delay="400">
-                            <a href="/#project">Project</a>
+                            <a href="/#project" className='bottom-hightlight'>Project</a>
                         </AosWrapper>
                     </li>
                     <li className="header-nav-item">
                         <AosWrapper animation="fade-down" delay="500">
-                            <a href="/#contact">Contact Me</a>
+                            <a href="/#contact" className='bottom-hightlight'>Contact Me</a>
                         </AosWrapper>
                     </li>
                 </ul>
             </nav>
         </header>
     )
-    //     <button type='button' className='header-btn resume-btn'>
-    //     Resume <i className="fa-solid fa-download"></i>
-    // </button>
 }
 
 export default Header

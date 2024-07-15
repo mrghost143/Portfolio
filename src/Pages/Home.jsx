@@ -12,7 +12,7 @@ const Home = () => {
 
     return (
         <ErrorBoundary>
-            <main className="main" >
+            <main className="main container" >
                 <Hero />
                 <About />
                 <Job />

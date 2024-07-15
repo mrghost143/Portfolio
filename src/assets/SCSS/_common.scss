@@ -4,20 +4,16 @@
     margin: auto;
 }
 main {
-    &.main {
-        padding: 0 50px;
-        @include breakpoint(ipad) {
-            padding: 0 20px;
-            position: relative;
-            z-index: -1;
-        }
-    }
+    // &.main {
+    //     padding: 0 50px;
+  
+    // }
 
     section:nth-child(1) {
         // background-color: red;
     }
     section:nth-child(2) {
-        background-color: yellow;
+        // background-color: yellow;
     }
     section:nth-child(3) {
         background-color: green;
@@ -31,8 +27,8 @@ main {
 }
 section {
     min-height: 100vh;
-    max-width: 1200px;
-    padding: 80px 50px 50px;
+    // max-width: 1200px;
+    padding: 0px 50px 50px 50px;
     margin: 0 auto;
 }
 .header {
@@ -75,5 +71,39 @@ section {
         outline: none;
         box-shadow: -4px 4px 0 0 $highlightColor;
         transform: translate(5px, -5px);
+    }
+}
+.section-heading {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: flex-end;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+    font-size: clamp(24px, 4vw, 28px);
+    white-space: nowrap;
+    font-weight: 600;
+    color: $textColorLightest;
+    &::before {
+        position: relative;
+        bottom: 4px;
+        counter-increment: section 1;
+        content: "0" counter(section) ".";
+        margin-right: 10px;
+        color: $highlightColor;
+        font-family: $mono-font;
+        font-weight: 600;
+        font-size: clamp(24px, 4vw, 28px);
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: relative;
+        max-width: 400px;
+        width: 100%;
+        height: 1px;
+        margin-left: 20px;
+        background-color: $textColorDark;
+        align-self: center;
     }
 }

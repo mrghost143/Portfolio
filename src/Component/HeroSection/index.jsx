@@ -2,10 +2,20 @@
 import { AosWrapper, HightlightButton, UnderHightlight } from "../Common/Wrapper"
 import "./hero.scss";
 import { PiDownloadSimpleBold } from "react-icons/pi";
+import resume from "../../assets/DOC/Resume.pdf"
 
 const Hero = () => {
 
   // throw new Error('I crashed!');
+
+  const resumeDownload = () => {
+    const link = document.createElement("a");
+    link.href = resume;
+    link.download = "Ankit_Bisht_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
   return (
     <section id="hero">
@@ -28,7 +38,7 @@ const Hero = () => {
         </p>
       </AosWrapper>
       <AosWrapper animation="fade-up" anchor="bottom-bottom" delay="1100">
-        <HightlightButton>
+        <HightlightButton onClick={resumeDownload}>
           <PiDownloadSimpleBold />&nbsp;Resume
         </HightlightButton>
       </AosWrapper>

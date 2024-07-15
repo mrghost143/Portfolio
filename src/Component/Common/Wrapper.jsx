@@ -20,3 +20,9 @@ export const HightlightButton = (prop) => {
         {children}
     </button >);
 };
+export const SectionHeading = (prop) => {
+    const { children } = prop
+    return (<h2 className="section-heading">
+        {children}
+    </h2 >);
+};
