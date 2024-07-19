@@ -1,4 +1,5 @@
 @import "../../assets/SCSS/variables";
+
 .socail-list {
     display: flex;
     gap: 30px;
@@ -6,9 +7,11 @@
     font-size: 18px;
     justify-content: center;
     color: $textColorLightest;
+
     &-item {
         cursor: pointer;
         font-size: 22px;
+
         &:hover {
             transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
             transform: translateY(-5px);
@@ -17,6 +20,7 @@
         }
     }
 }
+
 .mail {
     a {
         color: $textColorLightest;
@@ -26,6 +30,7 @@
         -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
         font-size: 12px;
+
         &:hover {
             transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
             transform: translateY(-8px);
@@ -33,6 +38,7 @@
         }
     }
 }
+
 .sticky {
     &::after {
         content: "";
@@ -41,18 +47,5 @@
         height: 90px;
         margin: 0px auto;
         background-color: $textColor;
-    }
-}
-
-.position {
-    &-left {
-        position: fixed;
-        left: 50px;
-        bottom: 0;
-    }
-    &-right {
-        position: fixed;
-        right: 50px;
-        bottom: 0;
     }
 }

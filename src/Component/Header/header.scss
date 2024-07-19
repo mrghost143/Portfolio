@@ -10,14 +10,17 @@
         height: 80px;
         z-index: 10;
     }
+
     &.scaleUp {
         top: -80px;
         transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
     &-logo {
         font-size: 24px;
         font-family: $primary-font;
@@ -31,6 +34,7 @@
         color: $highlightColor;
         font-weight: 300;
         border: 2px solid $highlightColor;
+
         a {
             color: $highlightColor;
         }
@@ -41,10 +45,10 @@
             display: flex;
             gap: 10px;
         }
+
         &-item {
             counter-increment: item 1;
             margin: 0 2px;
-            display: block;
             padding: 10px;
             font-size: 14px;
             color: $textColorLightest;
@@ -57,12 +61,14 @@
                 color: $highlightColor;
                 font-family: $mono-font;
             }
+
             a {
                 color: $textColorLightest;
-                &:hover{
+
+                &:hover {
                     color: $highlightColor;
                 }
-                
+
             }
         }
     }

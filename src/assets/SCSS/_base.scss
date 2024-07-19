@@ -20,7 +20,7 @@ html {
     background: $bgColor;
     min-height: 100vh;
     scrollbar-width: thin;
-    scrollbar-color: $textColorDark $bgColor;
+    scrollbar-color: $bgColorLight $bgColor;
     scroll-behavior: smooth;
 }
 body {
@@ -29,6 +29,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-weight: 400;
     color: $textColor;
+
     button,
     a {
         cursor: pointer;

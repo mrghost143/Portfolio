@@ -1,3 +1,26 @@
+
+:root {
+
+    --bg-Color: hsl(216, 65%, 11%);
+    --bg-Color-Light:hsl(218, 58%, 16%);
+    --bg-Color-Blur: hsla(216, 65%, 11%, 0.851);
+    --highlight-Color: hsl(166, 100%, 70%);
+    --text-Color-Dark: hsl(220, 21%, 36%);
+    --text-Color: hsl(225, 20%, 61%);
+    --text-Color-Light: hsl(225, 31%, 74%);
+    --text-Color-Lightest: hsl(226, 70%, 88%);
+
+    // --bg-Color: hsl(343, 64%, 11%);
+    // --bg-Color-Blur: hsla(343, 64%, 11%, 0.851);
+    // --bg-Color-Light: hsl(341, 58%, 16%);
+    // --highlight-Color: hsl(5, 100%, 70%);
+    // --text-Color-Dark: hsl(99, 21%, 36%);
+    // --text-Color: hsl(99, 20%, 61%);
+    // --text-Color-Light: hsl(99, 31%, 74%);
+    // --text-Color-Lightest: hsl(99, 70%, 88%);
+
+}
+
 @import "variables";
 @import "font";
 @import "breakpoint";

@@ -1,13 +1,9 @@
-// import React from 'react'
 import { AosWrapper, HightlightButton, UnderHightlight } from "../Common/Wrapper"
 import "./hero.scss";
 import { PiDownloadSimpleBold } from "react-icons/pi";
 import resume from "../../assets/DOC/Resume.pdf"
 
 const Hero = () => {
-
-  // throw new Error('I crashed!');
-
   const resumeDownload = () => {
     const link = document.createElement("a");
     link.href = resume;
@@ -32,7 +28,7 @@ const Hero = () => {
         <p className="intro">
           I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences.
           Currently, I’m focused on building accessible, human-centered products at
-          <UnderHightlight>
+          <UnderHightlight onClick={() => console.log("helo")}>
             Neosoft
           </UnderHightlight>.
         </p>

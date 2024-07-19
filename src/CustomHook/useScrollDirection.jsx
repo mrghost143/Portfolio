@@ -16,7 +16,7 @@ const useScrollDirection = () => {
           setScrollDirection('up');
         }
       }
-      lastScrollTopRef.current = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+      lastScrollTopRef.current = scrollTop <= 0 ? 0 : scrollTop; 
     };
     window.addEventListener('scroll', handleScroll);
     return () => {

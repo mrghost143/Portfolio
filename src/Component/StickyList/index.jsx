@@ -25,6 +25,9 @@ const StickyList = () => {
                     </p>
                 </AosWrapper>
             </div>
+            <footer>
+                heolo
+            </footer>
 
 
 

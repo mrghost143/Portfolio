@@ -10,7 +10,7 @@ import { IoCloseOutline } from "react-icons/io5";
 
 const Header = () => {
     const direction = useScrollDirection();
-    const [isMenu, setisMenu] = useState(false);
+    const [isMenu, setIsMenu] = useState(false);
     const [width] = useWindowSize()
     useEffect(() => {
         if (width < 768 && isMenu) {
@@ -18,7 +18,14 @@ const Header = () => {
         } else {
             document.getElementsByTagName('body')[0].classList.remove("hideOverflow")
         }
-    }, [width, isMenu])
+    }, [width, isMenu]);
+    const closeMenu = () => {
+        if (width < 768) {
+            setIsMenu(false)
+        }
+    }
+
+    const headline = [{ text: "About Me", navigate: "about" }, { text: "Skills", navigate: "job" }, { text: "Project", navigate: "project" }, { text: "Contact Me", navigate: "contact" }]
     return (
 
         <header
@@ -29,39 +36,23 @@ const Header = () => {
                 </div>
             </AosWrapper>
             <AosWrapper animation="fade-down" delay="200">
-                <button className="menu" type='button' onClick={() => setisMenu(true)}>
+                <button className="menu" type='button' onClick={() => setIsMenu(true)}>
                     <TbMenuDeep />
                 </button>
             </AosWrapper>
 
 
             <nav className={`header-nav ${isMenu ? "show" : "hide"}`}>
-                <button className="close" type='button' onClick={() => setisMenu(false)}>
+                <button className="close" type='button' onClick={() => setIsMenu(false)}>
                     <IoCloseOutline />
                 </button>
                 <ul className="header-nav-list">
-
-                    <li className="header-nav-item">
-                        <AosWrapper animation="fade-down" delay="200">
-                            <a href="/#about" className='bottom-hightlight'>About Me</a>
-                        </AosWrapper>
-                    </li>
-
-                    <li className="header-nav-item">
-                        <AosWrapper animation="fade-down" delay="300">
-                            <a href="/#job" className='bottom-hightlight'>Skills</a>
-                        </AosWrapper>
-                    </li>
-                    <li className="header-nav-item">
-                        <AosWrapper animation="fade-down" delay="400">
-                            <a href="/#project" className='bottom-hightlight'>Project</a>
-                        </AosWrapper>
-                    </li>
-                    <li className="header-nav-item">
-                        <AosWrapper animation="fade-down" delay="500">
-                            <a href="/#contact" className='bottom-hightlight'>Contact Me</a>
-                        </AosWrapper>
-                    </li>
+                    {headline.map((item, index) => {
+                        const { text, navigate } = item;
+                        return (<AosWrapper animation="fade-down" delay={(index + 1) + 100} clasToAdd={"header-nav-item"} key={index} type={"list"}>
+                            <a href={`/#${navigate}`} className='bottom-hightlight' onClick={closeMenu}>{text}</a>
+                        </AosWrapper>)
+                    })}
                 </ul>
             </nav>
         </header>
