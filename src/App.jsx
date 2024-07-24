@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import StickyList from "./Component/StickyList";
 
 
 const App = () => {
@@ -18,9 +19,12 @@ const App = () => {
   return (
     <Suspense fallback={"Loading"}  >
       <Header />
-      <Routes>
-        <Route exact path="/" element={<Home />} />    
-      </Routes>
+      <main className="main container" >
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+        </Routes>
+        <StickyList />
+      </main>
     </Suspense>
   )
 }

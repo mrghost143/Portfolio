@@ -47,12 +47,11 @@ const Header = () => {
                     <IoCloseOutline />
                 </button>
                 <ul className="header-nav-list">
-                    {headline.map((item, index) => {
-                        const { text, navigate } = item;
-                        return (<AosWrapper animation="fade-down" delay={(index + 1) + 100} clasToAdd={"header-nav-item"} key={index} type={"list"}>
-                            <a href={`/#${navigate}`} className='bottom-hightlight' onClick={closeMenu}>{text}</a>
-                        </AosWrapper>)
-                    })}
+                    {headline.map((item, key) =>
+                        <AosWrapper animation="fade-down" delay={(key + 1) + 100} clasToAdd={"header-nav-item"} key={key} type={"list"}>
+                            <a href={`/#${item?.navigate}`} className='bottom-hightlight' onClick={closeMenu}>{item?.text}</a>
+                        </AosWrapper>
+                    )}
                 </ul>
             </nav>
         </header>
