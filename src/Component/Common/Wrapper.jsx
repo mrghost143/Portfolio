@@ -28,8 +28,6 @@ export const HightlightButton = (prop) => {
     </button >);
 };
 export const SectionHeading = (prop) => {
-    const { children } = prop
-    return (<h2 className="section-heading">
-        {children}
-    </h2 >);
+    const { children } = prop;
+    return (<h2 className="section-heading">{children}</h2 >);
 };

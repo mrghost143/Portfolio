@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 1200px;
-    padding-top: 100px;
+    min-height: 100vh;
     .heading {
         &-1 {
             font-size: clamp(40px, 8vw, 75px);

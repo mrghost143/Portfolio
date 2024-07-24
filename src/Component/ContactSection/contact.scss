@@ -1,0 +1,40 @@
+#contact {
+    max-width: 800px;
+    // padding-bottom: 100px;
+    min-height: 100vh;
+
+    .section {
+        &-heading {
+            justify-content: center;
+
+            &::after {
+                display: none;
+            }
+        }
+        &-container{
+            max-width: 700px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            button{
+                font-size: 16px;
+                padding: 20px 30px;
+            }
+
+        }
+    }
+    .contact{
+        &-headline{
+            font-weight: 600;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        &-info{
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    }
+
+}

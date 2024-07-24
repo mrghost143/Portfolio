@@ -4,7 +4,6 @@ import { PiGithubLogoBold, PiInstagramLogoBold, PiFacebookLogoBold, PiLinkedinLo
 const StickyList = () => {
     return (
         <>
-
             <div className="position-left">
                 <AosWrapper animation={"zoom-in"} delay={"1500"} anchor={"bottom left"} >
                     <ul className="socail-list sticky">
@@ -15,7 +14,6 @@ const StickyList = () => {
                     </ul>
                 </AosWrapper>
             </div>
-
             <div className="position-right">
                 <AosWrapper animation={"zoom-in"} delay={"1500"} anchor={"bottom right"} >
                     <p className="mail sticky">
@@ -25,12 +23,10 @@ const StickyList = () => {
                     </p>
                 </AosWrapper>
             </div>
-            <footer>
-                heolo
+            <footer className="bright-text footer">
+                <a href="https://github.com/mrghost143" className="bright-text" target="_blank" rel="noreferrer">Built and enhanced by Ankt Bisht</a>
+                <a href="https://github.com/bchiang7/v4" className="bright-text" target="_blank" rel="noreferrer">Designed by Brittany Chiang</a>
             </footer>
-
-
-
         </>
     )
 }
