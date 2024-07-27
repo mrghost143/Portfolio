@@ -101,9 +101,19 @@ section {
 
                 @include breakpoint(ipad) {
                     display: none;
-                    
+
                 }
             }
         }
     }
+}
+
+
+.car {
+    stroke: $highlightColor;
+}
+
+.track {
+    stroke: $textColor;
+
 }
