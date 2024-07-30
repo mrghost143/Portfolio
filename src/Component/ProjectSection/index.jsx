@@ -4,6 +4,11 @@ import "./project.scss";
 import FeaturedProject from "./FeaturedProject"
 import OtherProject from "./OtherProject";
 import { useRef, useState } from "react";
+import feature0 from "../../assets/IMG/ekyc.png"
+import feature1 from "../../assets/IMG/rmportal.png"
+import feature2 from "../../assets/IMG/iam.png"
+
+
 
 const add = [{
   link: { github: "adcbkjadca", website: "csdcuwbjc" },
@@ -81,6 +86,43 @@ const more = [{
 ]
 
 
+const featuredProject = [
+  {
+    projectName: "E-KYC",
+    projectDesc: "Worked on the development of an Electronic Know Your Customer (EKYC) onboarding platform, designed to streamline the customer verification process for financial services. The platform aimed to offer a secure, user-friendly experience for customers to complete their KYC requirements online, improving efficiency and compliance with regulatory standards",
+    projectSpecList: ["React", "SCSS", "Bootstrap"],
+    projectGitHub: "",
+    projectURL: "https://ekyc.bajajfinservsecurities.in/",
+    align:"right",
+    img:feature0
+  },
+  {
+    projectName: "RM Portal",
+    projectDesc: "Contributed to the development of a Risk Management Portal, providing tools for risk assessment, tracking, and reporting, The project aimed to address issues faced by clients during onboarding and enable telecallers to provide real-time assistance, thereby improving the overall customer experience and reducing onboarding friction",
+    projectSpecList: ["React", "SCSS", "Bootstrap"],
+    // projectGitHub: "",
+    projectURL: "https://cosmos.bajajfinservsecurities.in/",
+    align:"left",
+    img:feature1
+
+
+  },
+  {
+    projectName: "IAM",
+    projectDesc: "Developed and optimized an IAM system for managing user roles, permissions, and authentication with a focus on security and user management",
+    projectSpecList: ["React", "SCSS", "Bootstrap"],
+    // projectGitHub: "",
+    projectURL: "https://iam.bajajfinservsecurities.in/",
+    align:"right",
+    img:feature2
+
+
+  }
+
+
+]
+
+
 const Project = () => {
   const [show, setShow] = useState(false);
   const scrollRef = useRef(null);
@@ -99,9 +141,9 @@ const Project = () => {
       <AosWrapper animation={"fade-up"} anchor={"top top"}>
         <SectionHeading>Some Things I’ve Built</SectionHeading>
         <div className="featured-wrapper">
-          <FeaturedProject align={"right"} />
-          <FeaturedProject align={"left"} />
-          <FeaturedProject align={"right"} />
+          <FeaturedProject dataProp={featuredProject[0]} />
+          <FeaturedProject dataProp={featuredProject[1]} />
+          <FeaturedProject dataProp={featuredProject[2]} />
         </div>
         <div className="other-project">
           <div className="other-head-wrapper">

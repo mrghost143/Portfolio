@@ -5,16 +5,8 @@ import "aos/dist/aos.css";
 import StickyList from "./Component/StickyList";
 import Loader from "./Component/Loader";
 
-
 const App = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 700,
-      easing: "ease-out-cubic",
-      once: true,
-    });
-    AOS.refresh();
-  }, []);
+
 
 
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -26,7 +18,17 @@ const App = () => {
   };
 
   const Home = LazyComponent(() => import('./Pages/Home'));
-  const Header = lazy(() => import("./Component/Header"));
+  const Archive = LazyComponent(() => import("./Pages/Archive"));
+  const Header = LazyComponent(() => import("./Component/Header"));
+
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: "ease-out-cubic",
+      once: true,
+    });
+    AOS.refresh();
+  }, []);
 
   return (
     <Suspense fallback={<Loader />}  >
@@ -34,6 +36,8 @@ const App = () => {
       <main className="main container" >
         <Routes>
           <Route exact path="/" element={<Home />} />
+          {/* <Route exact path="/archive" element={<Archive />} /> */}
+
         </Routes>
         <StickyList />
       </main>

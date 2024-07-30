@@ -1,35 +1,29 @@
-import FeaturedImg from "../../assets/IMG/featuredImg.avif";
-import { PiGithubLogoBold ,PiArrowSquareOutBold} from "react-icons/pi";
+import { PiGithubLogoBold, PiArrowSquareOutBold } from "react-icons/pi";
 const FeaturedProject = (prop) => {
-const   {align}=prop
+  const { dataProp } = prop;
+  const { projectName, projectDesc, projectSpecList, align, img } = dataProp
+
   return (
     <div className={`featured ${align}`}>
       <div className="featured-img">
-        <img src={FeaturedImg} alt="" />
+        <img src={img} alt="" />
       </div>
       <div className="featured-info">
         <h4 className='featured-heading highlight-text'>
           Featured Project
         </h4>
         <h3 className="featured-name">
-          Halcyon Theme
+          {projectName}
         </h3>
         <p className="featured-description">
-          A minimal, dark blue theme for VS Code,
-          Sublime Text, Atom, iTerm,  and more.
-          Available on Visual Studio Marketplace, Package Control,
-          Atom Package Manager, and npm.
+          {projectDesc}
         </p>
         <ul className="spec-list">
-          <li>React</li>
-          <li>Node</li>
-          <li>React</li>
-          <li>Node</li>
-          <li>React</li>
+          {projectSpecList.map((item) => <li>{item}</li>)}
         </ul>
         <ul className="hyperlink-list">
-          <li><PiGithubLogoBold/></li>
-          <li><PiArrowSquareOutBold/></li>
+          <li><PiGithubLogoBold /></li>
+          <li><PiArrowSquareOutBold /></li>
         </ul>
       </div>
     </div>

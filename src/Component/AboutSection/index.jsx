@@ -1,12 +1,12 @@
 import "./about.scss"
 import { AosWrapper, SectionHeading, UnderHightlight } from "../Common/Wrapper";
-import ProfilePic from "../../assets/IMG/Profilephoto.avif"
+import ProfilePic from "../../assets/IMG/Profilephoto.png"
 
 const About = () => {
 
   const infoData = [
-    <p key="1">Hello! My name is Brittany and I enjoy creating things that live on the internet.
-      My interest in web development started back in 2012 when I decided to try
+    <p key="1">Hello! My name is Ankit and I enjoy creating things that live on the internet.
+      My interest in web development started back in 2021  when I decided to try
       editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot  about HTML & CSS!
     </p>,
     <p key="2">Fast-forward to today, and I’ve had the privilege of working at an advertising agency,
@@ -20,7 +20,7 @@ const About = () => {
     </p>
   ];
 
-  const skillList = [`React`, "JavaScript", "HTML5", "CSS3", "SASS", "Next",]
+  const skillList = ["React", "JavaScript", "HTML5", "CSS3", "SCSS", "Next",]
   return (
 
     <section id="about">
