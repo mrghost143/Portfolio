@@ -55,9 +55,9 @@
             width: 65%;
             height: 100%;
             z-index: 1;
-            background-color: $highlightColor;
+            // background-color: $highlightColor;
             cursor: pointer;
-            box-shadow: 0px 0px 4px 0px $highlightColor;
+            // box-shadow: 0px 0px 4px 0px $highlightColor;
             border-radius: 5px;
             overflow: hidden;
 
@@ -88,6 +88,8 @@
             position: relative;
             display: flex;
             flex-direction: column;
+                        // box-shadow: 0px 0px 4px 0px $highlightColor;
+
 
         }
 
@@ -104,7 +106,9 @@
         }
 
         &-description {
-            background-color: $bgColorLight;
+            background-color:$bgColorLight;
+            box-shadow: -3px 4px 7px $highlightColor;
+            backdrop-filter: blur(10px);
             padding: 30px 20px;
             font-size: 14px;
             margin-bottom: 20px;

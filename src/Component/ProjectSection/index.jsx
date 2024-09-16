@@ -93,8 +93,8 @@ const featuredProject = [
     projectSpecList: ["React", "SCSS", "Bootstrap"],
     projectGitHub: "",
     projectURL: "https://ekyc.bajajfinservsecurities.in/",
-    align:"right",
-    img:feature0
+    align: "right",
+    img: feature0
   },
   {
     projectName: "RM Portal",
@@ -102,8 +102,8 @@ const featuredProject = [
     projectSpecList: ["React", "SCSS", "Bootstrap"],
     // projectGitHub: "",
     projectURL: "https://cosmos.bajajfinservsecurities.in/",
-    align:"left",
-    img:feature1
+    align: "left",
+    img: feature1
 
 
   },
@@ -113,8 +113,8 @@ const featuredProject = [
     projectSpecList: ["React", "SCSS", "Bootstrap"],
     // projectGitHub: "",
     projectURL: "https://iam.bajajfinservsecurities.in/",
-    align:"right",
-    img:feature2
+    align: "right",
+    img: feature2
 
 
   }
@@ -145,7 +145,7 @@ const Project = () => {
           <FeaturedProject dataProp={featuredProject[1]} />
           <FeaturedProject dataProp={featuredProject[2]} />
         </div>
-        <div className="other-project">
+        {false && <div className="other-project">
           <div className="other-head-wrapper">
             <h3 className="other-heading">Other Noteworthy Projects</h3>
             <div>
@@ -177,7 +177,7 @@ const Project = () => {
               {!show ? <>Show<TbSquareRoundedArrowDown /></> : <>Hide<TbSquareRoundedArrowUp /></>}
             </HightlightButton>
           </div>
-        </div>
+        </div>}
       </AosWrapper>
     </section>
   )

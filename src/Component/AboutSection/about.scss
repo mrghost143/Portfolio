@@ -32,7 +32,7 @@
             max-width: 300px;
             margin: 0 auto auto;
             .img-container {
-                background-color: $highlightColor;
+                // background-color: $highlightColor;
                 cursor: pointer;
                 max-width: 300px;
                 position: relative;
@@ -54,8 +54,10 @@
                     object-fit: fill;
                     width: 100%;
                     aspect-ratio: 1 / 1;
-                    mix-blend-mode: multiply;
-                    filter: grayscale(100%) contrast(1);
+                    border: 2px solid $highlightColor;
+
+                    // mix-blend-mode: multiply;
+                    // filter: grayscale(100%) contrast(1);
                     border-radius: 5px;
                     position: relative;
                 }

@@ -26,11 +26,12 @@ const Hero = () => {
       </AosWrapper>
       <AosWrapper animation="fade-up" anchor="bottom-bottom" delay="1000">
         <p className="intro">
-          I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences.
-          Currently, I’m focused on building accessible, human-centered products at
+
+          I’m a Frontend Developer, specializing in creating exceptional digital experiences with a focus on React.js at
           <UnderHightlight onClick={() => console.log("helo")}>
             Neosoft
           </UnderHightlight>.
+          My passion lies in crafting intuitive and engaging solutions that prioritize user experience and inclusivity.
         </p>
       </AosWrapper>
       <AosWrapper animation="fade-up" anchor="bottom-bottom" delay="1100">
