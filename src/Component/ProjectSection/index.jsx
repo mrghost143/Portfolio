@@ -90,17 +90,17 @@ const featuredProject = [
   {
     projectName: "E-KYC",
     projectDesc: "Worked on the development of an Electronic Know Your Customer (EKYC) onboarding platform, designed to streamline the customer verification process for financial services. The platform aimed to offer a secure, user-friendly experience for customers to complete their KYC requirements online, improving efficiency and compliance with regulatory standards",
-    projectSpecList: ["React", "SCSS", "Bootstrap"],
-    projectGitHub: "",
+    projectSpecList: ["React", "SCSS", "Bootstrap", "Axios"],
     projectURL: "https://ekyc.bajajfinservsecurities.in/",
+    projectGitHub: false,
     align: "right",
     img: feature0
   },
   {
     projectName: "RM Portal",
     projectDesc: "Contributed to the development of a Risk Management Portal, providing tools for risk assessment, tracking, and reporting, The project aimed to address issues faced by clients during onboarding and enable telecallers to provide real-time assistance, thereby improving the overall customer experience and reducing onboarding friction",
-    projectSpecList: ["React", "SCSS", "Bootstrap"],
-    // projectGitHub: "",
+    projectSpecList: ["React", "SCSS", "Ant-Design","REST API"],
+    projectGitHub: false,
     projectURL: "https://cosmos.bajajfinservsecurities.in/",
     align: "left",
     img: feature1
@@ -110,13 +110,11 @@ const featuredProject = [
   {
     projectName: "IAM",
     projectDesc: "Developed and optimized an IAM system for managing user roles, permissions, and authentication with a focus on security and user management",
-    projectSpecList: ["React", "SCSS", "Bootstrap"],
+    projectSpecList: ["Vite", "SCSS", "Recoil"],
     // projectGitHub: "",
     projectURL: "https://iam.bajajfinservsecurities.in/",
     align: "right",
     img: feature2
-
-
   }
 
 

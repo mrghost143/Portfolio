@@ -1,7 +1,8 @@
 import { PiGithubLogoBold, PiArrowSquareOutBold } from "react-icons/pi";
 const FeaturedProject = (prop) => {
   const { dataProp } = prop;
-  const { projectName, projectDesc, projectSpecList, align, img } = dataProp
+  const { projectName, projectDesc, projectSpecList, align, img, projectURL, projectGitHub,
+  } = dataProp
 
   return (
     <div className={`featured ${align}`}>
@@ -22,8 +23,9 @@ const FeaturedProject = (prop) => {
           {projectSpecList.map((item) => <li>{item}</li>)}
         </ul>
         <ul className="hyperlink-list">
-          <li><PiGithubLogoBold /></li>
-          <li><PiArrowSquareOutBold /></li>
+
+          {projectGitHub && <li><PiGithubLogoBold /></li>}
+          {projectURL && <li onClick={() => window.open(projectURL, "_blank")}><PiArrowSquareOutBold /></li>}
         </ul>
       </div>
     </div>
