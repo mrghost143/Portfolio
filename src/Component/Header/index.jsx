@@ -25,7 +25,7 @@ const Header = () => {
         }
     }
 
-    const headline = [{ text: "About Me", navigate: "about" }, { text: "Skills", navigate: "job" }, { text: "Project", navigate: "project" }, { text: "Contact Me", navigate: "contact" }]
+    const headline = [{ text: "About Me", navigate: "about" }, { text: "Experience", navigate: "job" }, { text: "Project", navigate: "project" }, { text: "Contact Me", navigate: "contact" }]
     return (
 
         <header
