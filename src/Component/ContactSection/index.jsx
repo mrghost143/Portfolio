@@ -15,7 +15,10 @@ const Contact = () => {
             Whether you have a question or just want to say hi, I’ll try my best to get back to you!
           </p>
           <HightlightButton>
-            Say Hello
+
+            <a href="mailto:bisht143ankit@gmail.com" className="mail-text" >Say Hello
+            </a>
+
           </HightlightButton>
         </div>
       </AosWrapper>

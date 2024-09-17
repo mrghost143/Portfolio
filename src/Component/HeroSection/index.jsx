@@ -1,13 +1,13 @@
 import { AosWrapper, HightlightButton, UnderHightlight } from "../Common/Wrapper"
 import "./hero.scss";
 import { PiDownloadSimpleBold } from "react-icons/pi";
-import resume from "../../assets/DOC/Resume.pdf"
+import resume from "../../assets/DOC/AnkitBisht-3Yr-React.pdf"
 
 const Hero = () => {
   const resumeDownload = () => {
     const link = document.createElement("a");
     link.href = resume;
-    link.download = "Ankit_Bisht_Resume.pdf";
+    link.download = "AnkitBisht-3Yr-React.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
